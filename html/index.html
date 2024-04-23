@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>寻香悦己-后台管理系统</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="./dist/css/adminx.css" media="screen" />
+    <LINK rel="stylesheet" href="./layouts/icon/iconfont.css">
+      <LINK rel="stylesheet" href="./layouts/icon1/iconfont.css">
+       <LINK rel="stylesheet" href="./layouts/icon2/iconfont.css">
+      <LINK rel="stylesheet" href="./layouts/icon3/iconfont.css">
+       <LINK rel="stylesheet" href="./layouts/icon4/iconfont.css">
+      <LINK rel="stylesheet" href="./layouts/icon5/iconfont.css">
+        <LINK rel="stylesheet" href="./layouts/icon6/iconfont.css">
+  </head>
+  <body>
+    <div class="adminx-container">
+      <nav class="navbar navbar-expand justify-content-between fixed-top">
+        <a class="navbar-brand mb-0 h1 d-none d-md-block" href="index.html">
+          <img src="./demo/img/logo.png" class="navbar-brand-image d-inline-block align-top mr-2" alt="">
+        </a>
+
+        <form class="form-inline form-quicksearch d-none d-md-block mx-auto">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-icon">
+                <i data-feather="search"></i>
+              </div>
+            </div>
+            <input type="text" class="form-control" id="search" placeholder="Type to search...">
+          </div>
+        </form>
+
+        <div class="d-flex flex-1 d-block d-md-none">
+          <a href="#" class="sidebar-toggle ml-3">
+            <i data-feather="menu"></i>
+          </a>
+        </div>
+
+        <ul class="navbar-nav d-flex justify-content-end mr-2">
+          <!-- Notificatoins -->
+          <li class="nav-item d-flex align-items-center mr-2">
+            <a href="./layouts/form_elements.html" target="_blank">
+              <img src="./demo/img/tianjia.webp" alt="添加页面" style="height: 20px;width: 20px;">
+          </a>
+          </li>
+          <li class="nav-item dropdown d-flex align-items-center mr-2">
+            <a class="nav-link nav-link-notifications" id="dropdownNotifications" data-toggle="dropdown" href="#">
+              <i class="oi oi-bell display-inline-block align-middle"></i>
+              <span class="nav-link-notification-number">3</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-notifications" aria-labelledby="dropdownNotifications">
+              <div class="notifications-header d-flex justify-content-between align-items-center">
+                <span class="notifications-header-title">
+                  消息框
+                </span>
+              </div>
+
+              <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action unread">
+                  <p class="mb-1"><strong>Make</strong> 在<strong>2024年2月1日</strong> 提交了申请</p>
+                  <div class="mb-1">
+                    <button type="button" class="btn btn-primary btn-sm">接受申请</button>
+                    <button type="button" class="btn btn-outline-danger btn-sm">取消</button>
+                  </div>
+
+                  <small>1 hour ago</small>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action">
+                  <p class="mb-1"><strong class="text-success">今天增加了</strong><br />1,000新用户</p>
+                  <small>3 days ago</small>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action">
+                  <p class="mb-1 text-danger"><strong>检测到系统错误</strong></p>
+                  <small>3 days ago</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <p class="mb-1"><strong class="text-success">今天增加了</strong><br />100新用户</p>
+                  <small>5 days ago</small>
+                </a>
+              </div>
+            </div>
+          </li>
+          <!-- Notifications -->
+          <li class="nav-item dropdown">
+            <a class="nav-link avatar-with-name" id="navbarDropdownMenuLink" data-toggle="dropdown" href="#">
+              <img src="./demo/img/头像.webp" class="d-inline-block align-top" >
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item text-danger" href="#">退出</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- expand-hover push -->
+      <!-- Sidebar -->
+       <div class="adminx-sidebar expand-hover push" id="sidebar">
+        <ul class="sidebar-nav">
+          <li class="sidebar-nav-item">
+            <a href="#" class="sidebar-nav-link">
+              <span class="sidebar-nav-icon">
+                <i data-feather="home"></i>
+              </span>
+              <span class="sidebar-nav-name">
+                主页
+              </span>
+              <span class="sidebar-nav-end">
+
+              </span>
+            </a>
+          </li>
+
+          <li class="sidebar-nav-item">
+            <a href="../html/layouts/tables_data.html" class="sidebar-nav-link">
+            <span class="sidebar-nav-icon">
+               <span class="iconfont icon-yonghuguanli"></span>
+              </span>
+
+              <span class="sidebar-nav-name">
+                用户管理
+              </span>
+            </a>
+          </li>
+
+          <li class="sidebar-nav-item">
+            <a class="sidebar-nav-link collapsed" href="../html/layouts/tables.html" >
+              <span class="sidebar-nav-icon">
+                <span class="iconfont icon-a-ziyuan1"></span>
+              </span>
+              <span class="sidebar-nav-name">
+                香水信息管理
+              </span>
+
+            </a>
+
+
+          </li>
+
+          <li class="sidebar-nav-item">
+            <a class="sidebar-nav-link" href="#navTables" >
+              <span class="sidebar-nav-icon">
+                <span class="iconfont icon-xitongguanli"></span>
+              </span>
+              <span class="sidebar-nav-name">
+                推荐系统管理
+              </span>
+
+            </a>
+          </li>
+
+          <li class="sidebar-nav-item">
+            <a class="sidebar-nav-link collapsed" href="./layouts/shoucang.html" >
+              <span class="sidebar-nav-icon">
+                <span class="iconfont icon-shoucangguanli"></span>
+              </span>
+              <span class="sidebar-nav-name">
+               收藏管理
+              </span>
+
+            </a>
+          </li>
+
+          <li class="sidebar-nav-item">
+            <a class="sidebar-nav-link collapsed" href="../html/layouts/look.html" >
+              <span class="sidebar-nav-icon">
+                <span class="iconfont icon-shujufenxi"></span>
+              </span>
+              <span class="sidebar-nav-name">
+                浏览数据
+              </span>
+            </a>
+          </li>
+
+          <li class="sidebar-nav-item">
+            <a class="sidebar-nav-link collapsed" href="./layouts/shequ.html" >
+              <span class="sidebar-nav-icon">
+              <span class="iconfont icon-anquanshezhi"></span>
+              </span>
+              <span class="sidebar-nav-name">
+               社区管理
+              </span>
+            </a>
+
+          </li>
+        </ul>
+      </div><!-- Sidebar End -->
+
+      <!-- adminx-content-aside -->
+      <div class="adminx-content">
+        <!-- <div class="adminx-aside">
+
+        </div> -->
+
+        <div class="adminx-main-content">
+          <div class="container-fluid">
+            <!-- BreadCrumb -->
+            <nav aria-label="breadcrumb" role="navigation">
+              <ol class="breadcrumb adminx-page-breadcrumb">
+
+              </ol>
+            </nav>
+
+            <div class="pb-3">
+              <h1>主页</h1>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-lg-3 d-flex">
+                <div class="card mb-grid w-100">
+                  <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between mb-3">
+                      <h5 class="card-title mb-0">
+                        日流量
+                      </h5>
+
+                      <div class="card-title-sub">
+                        428
+                      </div>
+                    </div>
+
+                    <div class="progress mt-auto">
+                      <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3 d-flex">
+                <div class="card mb-grid w-100">
+                  <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between mb-3">
+                      <h5 class="card-title mb-0">
+                        评论数
+                      </h5>
+
+                      <div class="card-title-sub">
+                        456
+                      </div>
+                    </div>
+
+                    <div class="progress mt-auto">
+                      <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3 d-flex">
+                <div class="card border-0 bg-primary text-white text-center mb-grid w-100">
+                  <div class="d-flex flex-row align-items-center h-100">
+                    <div class="card-icon d-flex align-items-center h-100 justify-content-center">
+                      <span class="iconfont icon-xiangshui" style="font-size: 30px;"></span>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-info-title">香水总数</div>
+                      <h3 class="card-title mb-0">
+                        10000
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3 d-flex">
+                <div class="card border-0 bg-success text-white text-center mb-grid w-100">
+                  <div class="d-flex flex-row align-items-center h-100">
+                    <div class="card-icon d-flex align-items-center h-100 justify-content-center">
+                      <i data-feather="users"></i>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-info-title">总人数</div>
+                      <h3 class="card-title mb-0">
+                        1,258
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+           <div class="row">
+              <div class="col-lg-6" style="padding-left: 30px;">
+         <div class="card mb-grid">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="card-header-title">每月新增用户数</div>
+                  </div>
+                  <div class="card-body">
+                    <div class="progress mb-3">
+                      <a>3月</a>
+                      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress mb-3">
+                      <a>3月</a>
+                      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress mb-3">
+                      <a>3月</a>
+                      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress mb-3">
+                      <a>3月</a>
+                      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress">
+                      <a>3月</a>
+                      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             <div class="col-lg-6">
+<div class="card mb-grid">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="card-header-title">用户占比</div>
+                  </div>
+                  <div class="card-body" style="padding-top: 40px;">
+
+                    <div class="progress mb-3" style="height: 1.2rem;">
+                      <a>男</a>
+                      <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                    </div>
+                     <div class="progress mb-3" style="height: 1.2rem;">
+                       <a>女</a>
+                      <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+             </div>
+             <div class="row">
+              <div class="col-lg-8" style="padding-left: 40px;width: 30rem;">
+                <div class="card">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="card-header-title">推荐</div>
+
+                    <nav class="card-header-actions">
+                      <a class="card-header-action" data-toggle="collapse" href="#card1" aria-expanded="false" aria-controls="card1">
+                        <i data-feather="minus-circle"></i>
+                      </a>
+
+                      <a href="#" class="card-header-action">
+                        <i data-feather="x-circle"></i>
+                      </a>
+                    </nav>
+                  </div>
+                  <div class="card-body collapse show" id="card1">
+                    <h4 class="card-title">个性化推荐</h4>
+                    <h5 class="card-text">推荐算法</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4" style="width: 43rem;height: 22rem;">
+                <div class="card">
+                  <div class="card-header">
+                    寻香
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">寻香悦己</h4>
+                    <p class="card-text">寻找合适的香水取悦自己</p>
+                    <a href="./layouts/tables.html" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- If you prefer jQuery these are the required scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="./dist/js/vendor.js"></script>
+    <script src="./dist/js/adminx.js"></script>
+
+<script src="chrome-extension://hobdccenjnlmlnlmijocljdcoopabjfg/static/js/inject.js" type="text/javascript" async=""></script>
+    <!-- If you prefer vanilla JS these are the only required scripts -->
+    <!-- script src="./dist/js/vendor.js"></script>
+    <script src="./dist/js/adminx.vanilla.js"></script-->
+  </body>
+</html>
