@@ -21,17 +21,6 @@
           <img src="../demo/img/logo.png" class="navbar-brand-image d-inline-block align-top mr-2" alt="">
         </a>
 
-        <form class="form-inline form-quicksearch d-none d-md-block mx-auto">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <div class="input-group-icon">
-                <i data-feather="search"></i>
-              </div>
-            </div>
-            <input type="text" class="form-control" id="search" placeholder="Type to search...">
-          </div>
-        </form>
-
         <div class="d-flex flex-1 d-block d-md-none">
           <a href="#" class="sidebar-toggle ml-3">
             <i data-feather="menu"></i>
@@ -40,11 +29,6 @@
 
         <ul class="navbar-nav d-flex justify-content-end mr-2">
           <!-- Notificatoins -->
-          <li class="nav-item d-flex align-items-center mr-2">
-            <a href="./form_elements.html" target="_blank">
-              <img src="../demo/img/tianjia.webp" alt="添加页面" style="height: 20px;width: 20px;">
-          </a>
-          </li>
           <li class="nav-item dropdown d-flex align-items-center mr-2">
             <a class="nav-link nav-link-notifications" id="dropdownNotifications" data-toggle="dropdown" href="#">
               <i class="oi oi-bell display-inline-block align-middle"></i>
@@ -225,9 +209,10 @@
                         </div>
                         <div class="col-sm-12 col-ma-6"  style="flex:0 0 50% ;text-align:right;">
                           <div class="dataTables_filter">
-                            <label style="text-align:right">
-                              搜索：
+                            <label>
                               <input type="search" class="form-control form-control-sm" style="width: auto;display: inline-block;">
+                              <button class="btn btn-sm btn-primary">搜索</button>
+                              <button class="btn btn-sm btn-primary remove__click">添加</button>
                             </label>
                           </div>
                         </div>
@@ -237,7 +222,7 @@
               <div class="col">
                 <div class="card mb-grid">
                   <div class="card-header d-flex justify-content-between align-items-center">
-                    <div class="card-header-title">Table</div>
+                    <div class="card-header-title">香水</div>
                   </div>
                   <div class="table-responsive-md">
                     <table class="table table-actions table-striped table-hover mb-0">
@@ -295,7 +280,7 @@
                           <td>q</td>
                           <td>1</td>
                           <td>
-                            <button class="btn btn-sm btn-primary">编辑</button>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
                             <button class="btn btn-sm btn-danger">删除</button>
                           </td>
                         </tr>
@@ -324,7 +309,7 @@
                           <td>q</td>
                           <td>1</td>
                           <td>
-                            <button class="btn btn-sm btn-primary">编辑</button>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
                             <button class="btn btn-sm btn-danger">删除</button>
                           </td>
                         </tr>
@@ -353,7 +338,7 @@
                           <td>q</td>
                           <td>1</td>
                           <td>
-                            <button class="btn btn-sm btn-primary">编辑</button>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
                             <button class="btn btn-sm btn-danger">删除</button>
                           </td>
                         </tr>
@@ -382,7 +367,7 @@
                           <td>q</td>
                           <td>1</td>
                           <td>
-                            <button class="btn btn-sm btn-primary">编辑</button>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
                             <button class="btn btn-sm btn-danger">删除</button>
                           </td>
                         </tr>
@@ -411,7 +396,7 @@
                           <td>q</td>
                           <td>1</td>
                           <td>
-                            <button class="btn btn-sm btn-primary">编辑</button>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
                             <button class="btn btn-sm btn-danger">删除</button>
                           </td>
                         </tr>
@@ -440,7 +425,7 @@
                           <td>q</td>
                           <td>1</td>
                           <td>
-                            <button class="btn btn-sm btn-primary">编辑</button>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
                             <button class="btn btn-sm btn-danger">删除</button>
                           </td>
                         </tr>
@@ -470,13 +455,92 @@
       </div>
       <!-- // Main Content -->
     </div>
-
+<div class="subside__barmenu">
+  <h3 style="text-align: center;margin-bottom:0;">添加/修改香水信息</h3>
+  <div class="card-body collapse show" id="card1">
+    <form>
+      <div class="form-group1">
+        <label class="form-label" for="exampleInputText">品牌</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group1">
+        <label class="form-label" for="exampleInputText">品牌介绍</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group1">
+        <label class="form-label" for="exampleInputText">香水名</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group1">
+        <label class="form-label" for="exampleInputText">香水简介</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group1">
+        <label class="form-label" for="exampleInputText">香调</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group1">
+        <label class="form-label" for="exampleInputText">中调</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group1">
+        <label class="form-label" for="exampleInputText">后调</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group1">
+        <label class="form-label" for="exampleInputText">属性</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group2" style="display: block;">
+        <label class="form-label" for="exampleInputText">调香师</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group2">
+        <label class="form-label" for="exampleInputText">标签</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group2">
+        <label class="form-label" for="exampleInputText">评分</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group2">
+        <label class="form-label" for="exampleInputText">气味</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group2">
+        <label class="form-label" for="exampleInputText">一句话香评</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group2">
+        <label class="form-label" for="exampleInputText">新气味</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group2">
+        <label class="form-label" for="exampleInputText">性格</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+      <div class="form-group2">
+        <label class="form-label" for="exampleInputText">场景</label>
+        <input type="text" class="form-control" placeholder="Please enter">
+      </div>
+    </form>
+      <button type="submit" class="btn-s btn-primary">提交</button>
+  </div>
+<a class="close remove__click" >
+  <img src="../demo/img/close.webp" style="height: 30px;">
+</a>
+</div>
     <!-- If you prefer jQuery these are the required scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <script src="../dist/js/vendor.js"></script>
     <script src="../dist/js/adminx.js"></script>
+    <script>
+    $(".remove__click").on("click", function (e) {
+		$(".subside__barmenu").toggleClass("active");
+	});
+    </script>
 
     <!-- If you prefer vanilla JS these are the only required scripts -->
     <!-- script src="../dist/js/vendor.js"></script>
