@@ -635,3 +635,640 @@
     <script src="../dist/js/adminx.vanilla.js"></script>
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>寻香悦己-用户管理</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="/css/adminx.css" media="screen" />
+    <LINK rel="stylesheet" href="/layouts/icon/iconfont.css">
+      <LINK rel="stylesheet" href="/layouts/icon1/iconfont.css">
+       <LINK rel="stylesheet" href=" /layouts/icon2/iconfont.css">
+      <LINK rel="stylesheet" href=" /layouts/icon3/iconfont.css">
+       <LINK rel="stylesheet" href=" /layouts/icon4/iconfont.css">
+      <LINK rel="stylesheet" href=" /layouts/icon5/iconfont.css">
+  </head>
+  <body>
+    <div class="adminx-container">
+      <!-- Header -->
+      <nav class="navbar navbar-expand justify-content-between fixed-top">
+        <a class="navbar-brand mb-0 h1 d-none d-md-block" href="/index.html">
+          <img src="/img/logo.png" class="navbar-brand-image d-inline-block align-top mr-2" alt="">
+        </a>
+
+        <div class="d-flex flex-1 d-block d-md-none">
+          <a href="#" class="sidebar-toggle ml-3">
+            <i data-feather="menu"></i>
+          </a>
+        </div>
+
+        <ul class="navbar-nav d-flex justify-content-end mr-2">
+          <!-- Notificatoins -->
+          <li class="nav-item dropdown d-flex align-items-center mr-2">
+            <a class="nav-link nav-link-notifications" id="dropdownNotifications" data-toggle="dropdown" href="#">
+              <i class="oi oi-bell display-inline-block align-middle"></i>
+              <span class="nav-link-notification-number">3</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-notifications" aria-labelledby="dropdownNotifications">
+              <div class="notifications-header d-flex justify-content-between align-items-center">
+                <span class="notifications-header-title">
+                  消息框
+                </span>
+              </div>
+
+              <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action unread">
+                  <p class="mb-1"><strong>Make</strong> 在<strong>2024年2月1日</strong> 提交了申请</p>
+                  <div class="mb-1">
+                    <button type="button" class="btn btn-primary btn-sm">接受申请</button>
+                    <button type="button" class="btn btn-outline-danger btn-sm">取消</button>
+                  </div>
+
+                  <small>1 hour ago</small>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action">
+                  <p class="mb-1"><strong class="text-success">今天增加了</strong><br />1,000新用户</p>
+                  <small>3 days ago</small>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action">
+                  <p class="mb-1 text-danger"><strong>检测到系统错误</strong></p>
+                  <small>3 days ago</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <p class="mb-1"><strong class="text-success">今天增加了</strong><br />100新用户</p>
+                  <small>5 days ago</small>
+                </a>
+              </div>
+            </div>
+          </li>
+          <!-- Notifications -->
+          <li class="nav-item dropdown">
+            <a class="nav-link avatar-with-name" id="navbarDropdownMenuLink" data-toggle="dropdown" href="#">
+              <img src="/img/头像.webp" class="d-inline-block align-top" >
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item text-danger" href="#">退出</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- // Header -->
+
+      <!-- expand-hover push -->
+      <div class="adminx-sidebar expand-hover push" id="sidebar">
+        <ul class="sidebar-nav">
+          <li class="sidebar-nav-item">
+            <a href="/index.html" class="sidebar-nav-link">
+              <span class="sidebar-nav-icon">
+                <i data-feather="home"></i>
+              </span>
+              <span class="sidebar-nav-name">
+                主页
+              </span>
+              <span class="sidebar-nav-end">
+
+              </span>
+            </a>
+          </li>
+
+          <li class="sidebar-nav-item">
+            <a href="#" class="sidebar-nav-link">
+            <span class="sidebar-nav-icon">
+               <span class="iconfont icon-yonghuguanli"></span>
+              </span>
+
+              <span class="sidebar-nav-name">
+                用户管理
+              </span>
+            </a>
+          </li>
+
+          <li class="sidebar-nav-item">
+            <a class="sidebar-nav-link collapsed" href="tables.html" >
+              <span class="sidebar-nav-icon">
+                <span class="iconfont icon-a-ziyuan1"></span>
+              </span>
+              <span class="sidebar-nav-name">
+                香水信息管理
+              </span>
+
+            </a>
+
+
+          </li>
+
+          <li class="sidebar-nav-item">
+            <a class="sidebar-nav-link" href="#navTables" >
+              <span class="sidebar-nav-icon">
+                <span class="iconfont icon-xitongguanli"></span>
+              </span>
+              <span class="sidebar-nav-name">
+                推荐系统管理
+              </span>
+
+            </a>
+          </li>
+
+          <li class="sidebar-nav-item">
+            <a class="sidebar-nav-link collapsed"  href="/shoucang.html" >
+              <span class="sidebar-nav-icon">
+                <span class="iconfont icon-shoucangguanli"></span>
+              </span>
+              <span class="sidebar-nav-name">
+               收藏管理
+              </span>
+
+            </a>
+          </li>
+
+          <li class="sidebar-nav-item">
+            <a class="sidebar-nav-link collapsed"  href="look.html" >
+              <span class="sidebar-nav-icon">
+                <span class="iconfont icon-shujufenxi"></span>
+              </span>
+              <span class="sidebar-nav-name">
+                浏览数据
+              </span>
+            </a>
+          </li>
+
+          <li class="sidebar-nav-item">
+            <a class="sidebar-nav-link collapsed"  href="shequ.html">
+              <span class="sidebar-nav-icon">
+              <span class="iconfont icon-anquanshezhi"></span>
+              </span>
+              <span class="sidebar-nav-name">
+               社区管理
+              </span>
+            </a>
+
+          </li>
+        </ul>
+      </div>
+      <!-- Main Content -->
+      <div class="adminx-content">
+        <div class="adminx-main-content">
+          <div class="container-fluid">
+            <!-- BreadCrumb -->
+            <nav aria-label="breadcrumb" role="navigation">
+              <ol class="breadcrumb adminx-page-breadcrumb">
+                <li class="breadcrumb-item"><a href="#">主页</a></li>
+                <li class="breadcrumb-item"><a href="#">用户管理</a></li>
+              </ol>
+            </nav>
+
+            <div class="pb-3">
+              <h1>用户管理</h1>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="card mb-grid">
+                  <div class="table-responsive-md">
+                    <div dataTables_wrapper container-fluid dt-bootstrap4 no-footer>
+                      <div class="row">
+                        <div class="col-sm-12 col-ma-6" style="flex:0 0 50%">
+                          <div class="dataTables_length">
+                            <label>
+                              show
+                              <select class="form-control form-control-sm" style="width: auto;display: inline-block;">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                              </select>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-12 col-ma-6"  style="flex:0 0 50% ;text-align:right;">
+                          <div class="dataTables_filter">
+                            <label>
+                              <input type="search" class="form-control form-control-sm" style="width: auto;display: inline-block;">
+                              <button class="btn btn-sm btn-primary">搜索</button>
+                              <button class="btn btn-sm btn-primary remove__click">添加</button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            <div class="row">
+              <div class="col">
+                <div class="card mb-grid">
+                  <div class="table-responsive-md">
+                    <table class="table table-actions table-striped table-hover mb-0" data-table>
+                      <thead>
+                        <tr>
+                          <th scope="col">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-all">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                          <th scope="col">名字</th>
+                          <th scope="col">密码</th>
+                          <th scope="col">邮箱</th>
+                          <th scope="col">性别</th>
+                          <th scope="col">简介</th>
+                          <th scope="col">用户id</th>
+                          <th scope="col" style="text-align: center;">编辑</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                           <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>男</td>
+                          <td>简介</td>
+                          <td>1</td>
+                          <td>
+                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
+                            <button class="btn btn-sm btn-danger">删除</button>
+                          </td>
+                        </tr>
+                        <tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Main Content -->
+    </div>
+    <div class="subside__barmenu">
+      <h3 style="text-align: center;margin-bottom:0;">添加/修改个人信息</h3>
+      <div class="card-body collapse show" id="card1">
+        <form>
+          <div class="form-group1 form-group3">
+            <label class="form-label" for="exampleInputText">名字</label>
+            <input type="text" class="form-control" placeholder="Enter name">
+          </div>
+          <div class="form-group1 form-group3">
+            <label class="form-label" for="exampleInputPassword1">密码</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-group1 form-group3">
+            <label class="form-label" for="exampleInputEmail1">邮箱地址</label>
+            <input type="email" class="form-control"  placeholder="Enter email">
+          </div>
+          <div class="form-group1 form-group3">
+            <label class="form-label" for="exampleInputText">性别</label>
+            <input type="text" class="form-control" placeholder="Enter gender">
+          </div>
+          <div class="form-group1  form-group3">
+            <label class="form-label" for="exampleInputText">简介</label>
+            <input type="text" class="form-control" placeholder="Enter text">
+          </div>
+        </form>
+          <button type="submit" class="btn-s btn-primary">提交</button>
+      </div>
+    <a class="close remove__click" >
+      <img src="/img/close.webp" style="height: 30px;">
+    </a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      $(".remove__click").on("click", function (e) {
+      $(".subside__barmenu").toggleClass("active");
+    });
+    </script>
+    <script src="/js/vendor.js"></script>
+    <script src="/js/adminx.vanilla.js"></script>
+  </body>
+</html>
