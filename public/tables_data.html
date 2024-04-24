@@ -6,20 +6,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" type="text/css" href="/css/adminx.css" media="screen" />
-    <LINK rel="stylesheet" href="/layouts/icon/iconfont.css">
-      <LINK rel="stylesheet" href="/layouts/icon1/iconfont.css">
-       <LINK rel="stylesheet" href=" /layouts/icon2/iconfont.css">
-      <LINK rel="stylesheet" href=" /layouts/icon3/iconfont.css">
-       <LINK rel="stylesheet" href=" /layouts/icon4/iconfont.css">
-      <LINK rel="stylesheet" href=" /layouts/icon5/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../dist/css/adminx.css" media="screen" />
+    <LINK rel="stylesheet" href="./icon/iconfont.css">
+      <LINK rel="stylesheet" href="./icon1/iconfont.css">
+       <LINK rel="stylesheet" href="./icon2/iconfont.css">
+      <LINK rel="stylesheet" href="./icon3/iconfont.css">
+       <LINK rel="stylesheet" href="./icon4/iconfont.css">
+      <LINK rel="stylesheet" href="./icon5/iconfont.css">
   </head>
   <body>
     <div class="adminx-container">
       <!-- Header -->
       <nav class="navbar navbar-expand justify-content-between fixed-top">
-        <a class="navbar-brand mb-0 h1 d-none d-md-block" href="/index.html">
-          <img src="/img/logo.png" class="navbar-brand-image d-inline-block align-top mr-2" alt="">
+        <a class="navbar-brand mb-0 h1 d-none d-md-block" href="../index.html">
+          <img src="../demo/img/logo.png" class="navbar-brand-image d-inline-block align-top mr-2" alt="">
         </a>
 
         <div class="d-flex flex-1 d-block d-md-none">
@@ -72,7 +72,7 @@
           <!-- Notifications -->
           <li class="nav-item dropdown">
             <a class="nav-link avatar-with-name" id="navbarDropdownMenuLink" data-toggle="dropdown" href="#">
-              <img src="/img/头像.webp" class="d-inline-block align-top" >
+              <img src="../demo/img/头像.webp" class="d-inline-block align-top" >
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item text-danger" href="#">退出</a>
@@ -86,7 +86,7 @@
       <div class="adminx-sidebar expand-hover push" id="sidebar">
         <ul class="sidebar-nav">
           <li class="sidebar-nav-item">
-            <a href="/index.html" class="sidebar-nav-link">
+            <a href="../index.html" class="sidebar-nav-link">
               <span class="sidebar-nav-icon">
                 <i data-feather="home"></i>
               </span>
@@ -138,7 +138,7 @@
           </li>
 
           <li class="sidebar-nav-item">
-            <a class="sidebar-nav-link collapsed"  href="/shoucang.html" >
+            <a class="sidebar-nav-link collapsed"  href="./shoucang.html" >
               <span class="sidebar-nav-icon">
                 <span class="iconfont icon-shoucangguanli"></span>
               </span>
@@ -595,44 +595,7 @@
       </div>
       <!-- // Main Content -->
     </div>
-    <div class="subside__barmenu">
-      <h3 style="text-align: center;margin-bottom:0;">添加/修改个人信息</h3>
-      <div class="card-body collapse show" id="card1">
-        <form>
-          <div class="form-group1 form-group3">
-            <label class="form-label" for="exampleInputText">名字</label>
-            <input type="text" class="form-control" placeholder="Enter name">
-          </div>
-          <div class="form-group1 form-group3">
-            <label class="form-label" for="exampleInputPassword1">密码</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="form-group1 form-group3">
-            <label class="form-label" for="exampleInputEmail1">邮箱地址</label>
-            <input type="email" class="form-control"  placeholder="Enter email">
-          </div>
-          <div class="form-group1 form-group3">
-            <label class="form-label" for="exampleInputText">性别</label>
-            <input type="text" class="form-control" placeholder="Enter gender">
-          </div>
-          <div class="form-group1  form-group3">
-            <label class="form-label" for="exampleInputText">简介</label>
-            <input type="text" class="form-control" placeholder="Enter text">
-          </div>
-        </form>
-          <button type="submit" class="btn-s btn-primary">提交</button>
-      </div>
-    <a class="close remove__click" >
-      <img src="/img/close.webp" style="height: 30px;">
-    </a>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script>
-      $(".remove__click").on("click", function (e) {
-      $(".subside__barmenu").toggleClass("active");
-    });
-    </script>
     <script src="/js/vendor.js"></script>
-    <script src="/js/adminx.vanilla.js"></script>
+    <script src="/js/adminx.js"></script>
   </body>
 </html>
