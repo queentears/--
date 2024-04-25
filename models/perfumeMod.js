@@ -10,68 +10,78 @@ const perModel = db.define('香水总数据', {
         primaryKey: true,
         autoIncrement: true,
     },
-    perfumeName: {
+    Perfume: {
         type: DataTypes.STRING,
         allowNull: false,
         field:'香水名'
 
     },
-    brand:{
+    PerfumeDesc: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        field:'香水简介'
+    },
+    Brand:{
         type: DataTypes.STRING,
         allowNull: false,
         field:'品牌'
     },
-    perfumer: {
+    BrandDesc:{
+        type: DataTypes.TEXT,
+        allowNull: false,
+        field:'品牌简介'
+    },
+    Perfumer: {
         type: DataTypes.STRING,
         allowNull: false,
         field:'调香师'
     },
-    score: {
+    Score: {
         type: DataTypes.FLOAT,
         allowNull: false,
         field:'评分',
     },
-    qiandiao: {
+    Top: {
         type: DataTypes.STRING,
         allowNull: true ,// 根据你的需求调整
         field:'前调'
     },
-    zhongdiao: {
+    Middle: {
         type: DataTypes.STRING,
         allowNull: true, // 根据你的需求调整
         field:'中调',
     },
-    houdiao: {
+    Back: {
         type: DataTypes.STRING,
         allowNull: true, // 根据你的需求调整,
         field:'后调',
     },
-    xiangdiao:{
+    Notes:{
         type:DataTypes.STRING,
         allowNull:true,
         field:'香调',
     },
-    shuxing:{
+    Attribute:{
         type:DataTypes.STRING,
         allowNull:true,
         field:'属性',
     },
-    xingge:{
+    Personality:{
         type:DataTypes.STRING,
         allowNull:true,
         field:'性格',
     },
-    changjing:{
+    Scene:{
         type:DataTypes.STRING,
         allowNull:true,
         field:'场景',
     },
-    qiwei:{
+    Smell:{
         type:DataTypes.STRING,
         allowNull:true,
         field:'气味',
     },
-    biaoqian:{
+    Label:{
         type:DataTypes.STRING,
         allowNull:true,
         field:'标签',
