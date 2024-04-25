@@ -2,27 +2,29 @@ const express = require('express');
 const path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var passport = require('passport');
 
-const db = require('./db');//测试连接
 
-
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/api/users');
 
 const app = express();
 
 
-var indexRouter = require('./routers/index');
 
 
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
+app.use(passport.initialize());
+require('./config/passport')(passport);
 
 
 
 app.use('/', indexRouter);
-
+app.use('/api/users', usersRouter);
 
 
 
