@@ -31,7 +31,7 @@ const userModel = db.define('user', {
         allowNull: true,
         field:'gender'
     },
-    jianjie: {
+    Desc: {
         type: DataTypes.TEXT,
         allowNull: true,
         field:'jianjie'

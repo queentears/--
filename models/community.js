@@ -10,17 +10,17 @@ const Community = db.define('社区', {
         primaryKey: true,
         autoIncrement: true,
     },
-    name: {
+    Name: {
         type: DataTypes.STRING,
         allowNull: false,
         field:'name'
     },
-    content:{
+    Content:{
         type:DataTypes.TEXT,
         allowNull:false,
         field:'content',
     },
-    time:{
+    Time:{
         type:DataTypes.DATE,
         allowNull:false,
         field:'time',

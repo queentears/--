@@ -10,11 +10,11 @@ const favModel = db.define('favorites', {
         autoIncrement: true,
         field:"FavoriteID"
     },
-  userid:{
+  Userid:{
         type: DataTypes.INTEGER,
         field:'UserID',
     },
-    perfumeid:{
+    Perfumeid:{
         type: DataTypes.INTEGER,
         allowNull: false,
         field:'PerfumeID',
