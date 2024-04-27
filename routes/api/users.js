@@ -191,6 +191,35 @@ router.get("/:id", passport.authenticate('jwt', { session: false }), async funct
         res.status(500).send(error.message);
     }
 });
+//分页
+router.get('/page/:page/limit/:limit', passport.authenticate('jwt', { session: false }), async function(req, res) {
+    const page = parseInt(req.params.page, 10);
+    const limit = parseInt(req.params.limit, 10);
+
+    if (isNaN(page) || isNaN(limit)) {
+        return res.status(400).send("Invalid page or limit parameter");
+    }
+
+    try {
+        const offset = (page - 1) * limit;  // 计算偏移量
+        const users = await User.findAll({
+            limit: limit,
+            offset: offset
+        });
+
+        // 可选: 返回总用户数以便于分页处理
+        const totalUsers = await User.count();
+
+        res.json({
+            data: users,
+            total: totalUsers,
+            totalPages: Math.ceil(totalUsers / limit),
+            currentPage: page
+        });
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
+});
 
 
 
