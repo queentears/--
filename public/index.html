@@ -12,6 +12,9 @@
       <LINK rel="stylesheet" href=" /layouts/icon3/iconfont.css">
        <LINK rel="stylesheet" href=" /layouts/icon4/iconfont.css">
       <LINK rel="stylesheet" href=" /layouts/icon5/iconfont.css">
+        <LINK rel="stylesheet" href=" /layouts/icon6/iconfont.css">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="adminx-container">
@@ -268,99 +271,118 @@
             </div>
 
           </div>
-           <div class="row">
-              <div class="col-lg-6" style="padding-left: 30px;">
-         <div class="card mb-grid">
+          <div class="row">
+            <div class="col-lg-4">
+                <div class="card mb-grid">
+                  <div id="chart_div" style="width: 405px;height: 250px;">
+                  </div>
+                </div>
+                <div class="card mb-grid">
+                  <div id="piechart" style="width:405px; height: 250px;"></div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card mb-grid"  style="width: 860px;height: 530px;">
+                 <canvas id="myChart" width="600" height="400"></canvas>
+               </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6" style="padding-left: 40px;width: 30rem;">
+                <div class="card">
                   <div class="card-header d-flex justify-content-between align-items-center">
-                    <div class="card-header-title">每月新增用户数</div>
+                    <div>推荐功能页面</div>
                   </div>
                   <div class="card-body">
-                    <div class="progress mb-3">
-                      <a>3月</a>
-                      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="progress mb-3">
-                      <a>3月</a>
-                      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="progress mb-3">
-                      <a>3月</a>
-                      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="progress mb-3">
-                      <a>3月</a>
-                      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="progress">
-                      <a>3月</a>
-                      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-             <div class="col-lg-6">
-<div class="card mb-grid">
-                  <div class="card-header d-flex justify-content-between align-items-center">
-                    <div class="card-header-title">用户占比</div>
-                  </div>
-                  <div class="card-body" style="padding-top: 40px;">
-
-                    <div class="progress mb-3" style="height: 1.2rem;">
-                      <a>男</a>
-                      <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-                    </div>
-                     <div class="progress mb-3" style="height: 1.2rem;">
-                       <a>女</a>
-                      <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-             </div>
-             <div class="row">
-              <div class="col-lg-8" style="padding-left: 40px;width: 30rem;">
-                <div class="card">
-                  <div class="card-header d-flex justify-content-between align-items-center">
-                    <div class="card-header-title">推荐</div>
-
-                    <nav class="card-header-actions">
-                      <a class="card-header-action" data-toggle="collapse" href="#card1" aria-expanded="false" aria-controls="card1">
-                        <i data-feather="minus-circle"></i>
-                      </a>
-
-                      <a href="#" class="card-header-action">
-                        <i data-feather="x-circle"></i>
-                      </a>
-                    </nav>
-                  </div>
-                  <div class="card-body collapse show" id="card1">
                     <h4 class="card-title">个性化推荐</h4>
-                    <h5 class="card-text">推荐算法</h5>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-text">依照推荐算法，按照用户香水收藏标签，为用户进行较为准确的推荐</h5>
+                    <a href="tuijian.html" class="btn btn-primary">Let's go</a>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4" style="width: 43rem;height: 22rem;">
+              <div class="col-lg-6" style="width: 55rem;height: 22rem;">
                 <div class="card">
                   <div class="card-header">
-                    寻香
+                    寻香功能页面
                   </div>
                   <div class="card-body">
                     <h4 class="card-title">寻香悦己</h4>
-                    <p class="card-text">寻找合适的香水取悦自己</p>
-                    <a href="/tables.html" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-text">在寻香页面，用户依照自己想要的标签，筛选出自己心仪的香水。寻找自己想要的香水，来使自己心情愉悦。</h5>
+                    <a href="tables.html" class="btn btn-primary">Let's go</a>
                   </div>
                 </div>
               </div>
             </div>
          </div>
-
         </div>
       </div>
     </div>
+    <script>
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: ['一月', '二月', '三月', '四月', '五月', '六月'], // 数据标签
+              datasets: [{
+                  label: '每月人流量', // 数据集标签
+                  data: [50, 40, 30, 50, 70, 60], // 数据点
+                  borderColor: 'rgba(255, 99, 132, 1)', // 线条颜色
+                  backgroundColor: 'rgba(255, 99, 132, 0.5)', // 填充颜色
+                  fill: false
+              }, {
+                  label: '每月寻香页面用户量',
+                  data: [35, 25, 35, 70, 55, 65],
+                  borderColor: 'rgba(54, 162, 235, 1)',
+                  backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                  fill: false
+              }]
+          }
+      });
+  </script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+ 
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['元素', '数量', { role: 'style' } ],
+      ['1月', 8, '#b87333'],
+      ['2月', 10, 'silver'],
+      ['3月', 19, 'gold'],
+      ['4月', 21, 'color: pink'],
+      ['5月', 22, 'color:blue'],
+      ['6月', 27, 'color: red']
+    ]);
+ 
+    var options = {
+      title: '每月新增用户数',
+      legend: { position: 'none' },
+      bar: { groupWidth: '7px' }, // Make the bars a bit thicker for better comparison.
+      is3D: true,
+    };
+ 
+    var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+</script> 
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
 
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['性别', '人数'],
+      ['男',2],
+      ['女',11,]
+    ]);
+
+    var options = {
+      title: '用户占比'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+  }
+</script>
     <!-- If you prefer jQuery these are the required scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
