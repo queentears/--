@@ -195,20 +195,30 @@ router.get("/:id", passport.authenticate('jwt', { session: false }), async funct
 router.get('/page/:page/limit/:limit', passport.authenticate('jwt', { session: false }), async function(req, res) {
     const page = parseInt(req.params.page, 10);
     const limit = parseInt(req.params.limit, 10);
+    const keyword = req.query.keyword;  // 从查询参数中获取关键字
 
     if (isNaN(page) || isNaN(limit)) {
         return res.status(400).send("Invalid page or limit parameter");
     }
 
     try {
-        const offset = (page - 1) * limit;  // 计算偏移量
+        const offset = (page - 1) * limit;
+        const whereClause = keyword ? {
+            [Op.or]: [
+                {UserName: {[Op.like]: `%${keyword}%`}},
+                {Email: {[Op.like]: `%${keyword}%`}},
+                {Desc: {[Op.like]: `%${keyword}%`}},
+                {Gender: {[Op.like]: `%${keyword}%`}}
+            ]
+        } : {};
+
         const users = await User.findAll({
+            where: whereClause,
             limit: limit,
             offset: offset
         });
 
-        // 可选: 返回总用户数以便于分页处理
-        const totalUsers = await User.count();
+        const totalUsers = await User.count({ where: whereClause });
 
         res.json({
             data: users,

@@ -210,10 +210,10 @@
                         <div class="col-sm-12 col-ma-6"  style="flex:0 0 50% ;text-align:right;">
                           <div class="dataTables_filter">
                             <label>
-                              <input type="search" class="form-control form-control-sm" style="width: auto;display: inline-block;">
-                              <button class="btn btn-sm btn-primary">搜索</button>
+                              <input type="search" id="search-input" class="form-control form-control-sm" style="width: auto; display: inline-block;">
+                              <button id="search-button" class="btn btn-sm btn-primary">搜索</button>
                               <button class="btn btn-sm btn-primary remove__click addbtn">添加</button>
-                            </label>
+                          </label>                          
                           </div>
                         </div>
                       </div>
@@ -300,9 +300,14 @@
             console.error('No token found, please login first.');
             return; // 如果没有 token，重定向到登录页面
         }
-    
+        const searchInput = document.querySelector('#search-input');
+        const searchButton = document.querySelector('#search-button');
         // 初始化页面加载第一页，每页10条记录
-        fetchPageData(1, 10);
+        searchButton.addEventListener('click', function() {
+        fetchPageData(1, document.querySelector('.form-control.form-control-sm').value, searchInput.value);
+    });
+
+        fetchPageData(1, 10,'');
     
         // 设置事件监听，用于分页控件
         setupPaginationListeners();
@@ -313,14 +318,15 @@
             fetchPageData(1, pageSize);  // 请求第一页的数据，使用新的每页数量
         });
     
-        function fetchPageData(page, pageSize) {
-            fetch(`/api/users/page/${page}/limit/${pageSize}`, {
-                method: 'GET',
-                headers: {
-                    'Authorization': token,
-                    'Content-Type': 'application/json'
-                }
-            })
+        function fetchPageData(page, pageSize,keyword) {
+          const url = `/api/users/page/${page}/limit/${pageSize}` + (keyword ? `?keyword=${encodeURIComponent(keyword)}` : '');
+            fetch(url, {
+        method: 'GET',
+        headers: {
+            'Authorization':  localStorage.getItem('token'),
+            'Content-Type': 'application/json'
+                  }
+             })
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch data: ' + response.status);
