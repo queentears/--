@@ -245,7 +245,7 @@
                     </table>
                     <div class="card-footer d-flex justify-content-end">
                       <ul class="pagination pagination-clean pagination-sm mb-0">
-                      
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -262,11 +262,11 @@
           <form id="userForm">
               <div class="form-group">
                   <label class="form-label" for="userNameInput">名字</label>
-                  <input type="text" class="form-control" id="userNameInput" placeholder="Enter name">
+                  <input type="text" class="form-control" id="userNameInput" placeholder="输入昵称">
               </div>
               <div class="form-group">
                   <label class="form-label" for="userEmailInput">邮箱</label>
-                  <input type="email" class="form-control" id="userEmailInput" placeholder="Enter email">
+                  <input type="email" class="form-control" id="userEmailInput" placeholder="输入邮箱">
               </div>
               <div class="form-group">
                 <label class="form-label">性别</label>
@@ -278,11 +278,11 @@
             
               <div class="form-group" id="passwordGroup" style="display: none;">
                   <label class="form-label" for="userPasswordInput">密码</label>
-                  <input type="password" class="form-control" id="userPasswordInput" placeholder="Enter password">
+                  <input type="password" class="form-control" id="userPasswordInput" placeholder="输入密码">
               </div>
               <div class="form-group">
                   <label class="form-label" for="userDescInput">简介</label>
-                  <textarea class="form-control" id="userDescInput" rows="3" placeholder="Enter a short bio"></textarea>
+                  <textarea class="form-control" id="userDescInput" rows="3" placeholder="输入简介"></textarea>
                 
 
                 <div class="form-group">
@@ -463,7 +463,6 @@ function attachEventListeners() {
         });
     });
 }
-
 
 function fetchUserAndFillForm(userId) {
     // 根据 userId 获取用户信息并填充到表单

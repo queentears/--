@@ -210,10 +210,10 @@
                         <div class="col-sm-12 col-ma-6"  style="flex:0 0 50% ;text-align:right;">
                           <div class="dataTables_filter">
                             <label>
-                              <input type="search" class="form-control form-control-sm" style="width: auto;display: inline-block;">
-                              <button class="btn btn-sm btn-primary">搜索</button>
-                              <button class="btn btn-sm btn-primary remove__click">添加</button>
-                            </label>
+                              <input type="search" id="search-input" class="form-control form-control-sm" style="width: auto; display: inline-block;">
+                              <button id="search-button" class="btn btn-sm btn-primary">搜索</button>
+                              <button class="btn btn-sm btn-primary remove__click addbtn">添加</button>
+                          </label>      
                           </div>
                         </div>
                       </div>
@@ -234,11 +234,11 @@
                               <span class="custom-control-indicator"></span>
                             </label>
                           </th>
+                          <th scope="col">id</th>
                           <th scope="col">品牌</th>
-                          <th scope="col">品牌介绍</th>
                           <th scope="col">香水名</th>
-                          <th scope="col">香水简介</th>
                           <th scope="col">香调</th>
+                          <th scope="col">前调</th>
                           <th scope="col">中调</th>
                           <th scope="col">后调</th>
                           <th scope="col">属性</th>
@@ -246,202 +246,18 @@
                           <th scope="col">标签</th>
                           <th scope="col">评分</th>
                           <th scope="col">气味</th>
-                          <th scope="col">一句话香评</th>
-                          <th scope="col">新气味</th>
                           <th scope="col">性格</th>
                           <th scope="col">场景</th>
-                          <th scope="col">香水id</th>
                           <th scope="col" style="text-align: center;">管理</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <th scope="row">
-                            <label class="custom-control custom-checkbox m-0 p-0">
-                              <input type="checkbox" class="custom-control-input table-select-row">
-                              <span class="custom-control-indicator"></span>
-                            </label>
-                          </th>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>
-                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
-                            <button class="btn btn-sm btn-danger">删除</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <label class="custom-control custom-checkbox m-0 p-0">
-                              <input type="checkbox" class="custom-control-input table-select-row">
-                              <span class="custom-control-indicator"></span>
-                            </label>
-                          </th>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>
-                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
-                            <button class="btn btn-sm btn-danger">删除</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <label class="custom-control custom-checkbox m-0 p-0">
-                              <input type="checkbox" class="custom-control-input table-select-row">
-                              <span class="custom-control-indicator"></span>
-                            </label>
-                          </th>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>
-                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
-                            <button class="btn btn-sm btn-danger">删除</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <label class="custom-control custom-checkbox m-0 p-0">
-                              <input type="checkbox" class="custom-control-input table-select-row">
-                              <span class="custom-control-indicator"></span>
-                            </label>
-                          </th>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>
-                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
-                            <button class="btn btn-sm btn-danger">删除</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <label class="custom-control custom-checkbox m-0 p-0">
-                              <input type="checkbox" class="custom-control-input table-select-row">
-                              <span class="custom-control-indicator"></span>
-                            </label>
-                          </th>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>
-                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
-                            <button class="btn btn-sm btn-danger">删除</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <label class="custom-control custom-checkbox m-0 p-0">
-                              <input type="checkbox" class="custom-control-input table-select-row">
-                              <span class="custom-control-indicator"></span>
-                            </label>
-                          </th>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>
-                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
-                            <button class="btn btn-sm btn-danger">删除</button>
-                          </td>
-                        </tr>
+                        
+
                       </tbody>
                     </table>
                     <div class="card-footer d-flex justify-content-end">
-                      <ul class="pagination pagination-clean pagination-sm mb-0">
-                        <li class="page-item disabled">
-                          <a class="page-link" href="#" tabindex="-1">‹</a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">›</a>
-                        </li>
+                      <ul class="pagination pagination-clean pagination-sm mb-0">                  
                       </ul>
                     </div>
                   </div>
@@ -455,77 +271,391 @@
       </div>
       <!-- // Main Content -->
     </div>
-<div class="subside__barmenu" style="height: 90%; ">
-  <h3 style="text-align: center;margin-bottom:0;">添加/修改香水信息</h3>
-  <div class="card-body collapse show" id="card1">
-    <form style="margin-left: 10px;">
-      <div class="form-group1">
-        <label class="form-label" for="exampleInputText">品牌</label>
-        <input type="text" class="form-control form-group5" placeholder="Please enter">
+    <div class="subside__barmenu" style="height: 90%;">
+      <h3 style="text-align: center; margin-bottom: 0;">香水信息</h3>
+      <div class="card-body collapse show" id="card1">
+        <form id="perfumeForm" style="margin-left: 10px;">
+          <div class="form-group1">
+            <label class="form-label">品牌</label>
+            <input type="text" id="brandInput" class="form-control form-group5" placeholder="Please enter">
+          </div>
+          <div class="form-group1">
+            <label class="form-label">香水名</label>
+            <input type="text" id="perfumeNameInput" class="form-control form-group5" placeholder="Please enter">
+          </div>
+          <div class="form-group1">
+            <label class="form-label">香调</label>
+            <input type="text" id="notesInput" class="form-control form-group5" placeholder="Please enter">
+          </div>
+          <div class="form-group1">
+            <label class="form-label">前调</label>
+            <input type="text" id="topNoteInput" class="form-control form-group5" placeholder="Please enter">
+          </div>
+          <div class="form-group1">
+            <label class="form-label">中调</label>
+            <input type="text" id="middleNoteInput" class="form-control form-group5" placeholder="Please enter">
+          </div>
+          <div class="form-group1">
+            <label class="form-label">后调</label>
+            <input type="text" id="baseNoteInput" class="form-control form-group5" placeholder="Please enter">
+          </div>
+          <div class="form-group1">
+            <label class="form-label">属性</label>
+            <input type="text" id="attributeInput" class="form-control form-group5" placeholder="Please enter">
+          </div>
+          <div class="form-group1">
+            <label class="form-label">调香师</label>
+            <input type="text" id="perfumerInput" class="form-control form-group5" placeholder="Please enter">
+          </div>
+          <div class="form-group1">
+            <label class="form-label">标签</label>
+            <input type="text" id="labelInput" class="form-control form-group5" placeholder="Please enter">
+          </div>
+          <div class="form-group1">
+            <label class="form-label">评分</label>
+            <input type="text" id="scoreInput" class="form-control form-group5" placeholder="Please enter">
+          </div>
+          <div class="form-group1">
+            <label class="form-label">气味</label>
+            <input type="text" id="smellInput" class="form-control form-group5" placeholder="Please enter">
+          </div>
+          <div class="form-group1">
+            <label class="form-label">性格</label>
+            <input type="text" id="personalityInput" class="form-control form-group5" placeholder="Please enter">
+          </div>
+          <div class="form-group1">
+            <label the="form-label">场景</label>
+            <input type="text" id="sceneInput" class="form-control form-group5" placeholder="Please enter">
+          </div>
+          <div class="form-group2" style="float: inline-start;width: 100%;">
+            <label class="form-label">香水简介</label>
+            <input type="text" id="perfumeDescInput" class="form-control form-group4">
+          </div>
+          <div class="form-group2" style="float: inline-start;width: 100%;">
+            <label class="form-label">品牌介绍</label>
+            <input type="text" id="brandDescInput" class="form-control form-group4">
+          </div>
+
+          <button type="button" class="btn-s btn-primary" id="submitBtn"style="float: left; width: 30%; margin-left: 50px;">提交</button>
+          <button type="button" class="btn-s btn-secondary" id="cancelBtn" style="float: right; width: 30%; margin-right: 50px;">取消</button>
+        </form>
       </div>
-      <div class="form-group1">
-        <label class="form-label" for="exampleInputText">香水名</label>
-        <input type="text" class="form-control form-group5" placeholder="Please enter">
-      </div>
-      <div class="form-group1">
-        <label class="form-label" for="exampleInputText">香调</label>
-        <input type="text" class="form-control form-group5" placeholder="Please enter">
-      </div>
-      <div class="form-group1">
-        <label class="form-label" for="exampleInputText">中调</label>
-        <input type="text" class="form-control form-group5" placeholder="Please enter">
-      </div>
-      <div class="form-group1">
-        <label class="form-label" for="exampleInputText">后调</label>
-        <input type="text" class="form-control form-group5" placeholder="Please enter">
-      </div>
-      <div class="form-group1">
-        <label class="form-label" for="exampleInputText">属性</label>
-        <input type="text" class="form-control form-group5" placeholder="Please enter">
-      </div>
-      <div class="form-group1" style="display: block;">
-        <label class="form-label" for="exampleInputText">调香师</label>
-        <input type="text" class="form-control form-group5" placeholder="Please enter">
-      </div>
-      <div class="form-group1">
-        <label class="form-label" for="exampleInputText">标签</label>
-        <input type="text" class="form-control form-group5" placeholder="Please enter">
-      </div>
-      <div class="form-group1">
-        <label class="form-label" for="exampleInputText">评分</label>
-        <input type="text" class="form-control form-group5" placeholder="Please enter">
-      </div>
-      <div class="form-group1">
-        <label class="form-label" for="exampleInputText">气味</label>
-        <input type="text" class="form-control form-group5" placeholder="Please enter">
-      </div>
-      <div class="form-group1">
-        <label class="form-label" for="exampleInputText">性格</label>
-        <input type="text" class="form-control form-group5" placeholder="Please enter">
-      </div>
-      <div class="form-group1">
-        <label class="form-label" for="exampleInputText">场景</label>
-        <input type="text" class="form-control form-group5" placeholder="Please enter">
-      </div>
-      <div class="form-group2" style="float: inline-start;width: 100%;">
-        <label class="form-label" for="exampleInputText">香水简介</label>
-        <input type="text" class="form-control  form-group4">
-      </div>
-      <div class="form-group2" style="float: inline-start;width: 100%;">
-        <label class="form-label" for="exampleInputText">品牌介绍</label>
-        <input type="text" class="form-control  form-group4">
-      </div>
-      <div class="form-group2" style="float: inline-start;width: 100%;">
-        <label class="form-label" for="exampleInputText">一句话香评</label>
-        <input type="text" class="form-control  form-group4">
-      </div>
-    </form>
-    <form style=" justify-content: center;">
-      <button type="submit" class="btn-s btn-primary" style="float:left;width: 30%; margin-left: 50px;">提交</button>
-      <button type="submit" class="btn-s btn-primary remove__click" style="float:right;width: 30%;margin-right: 50px;">取消</button>
-      </form>
-  </div>
-</div>
+    </div>
+
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const token = localStorage.getItem('token');
+          if (!token) {
+              console.error('No token found, please login first.');
+              return; // 如果没有 token，重定向到登录页面
+          }
+      
+          const searchInput = document.querySelector('#search-input');
+          const searchButton = document.querySelector('#search-button');
+      
+          // 触发搜索操作
+          searchButton.addEventListener('click', function() {
+              fetchPageData(1, document.querySelector('.form-control.form-control-sm').value, searchInput.value);
+          });
+      
+          // 初始化加载数据
+          fetchPageData(1, 10, '');
+          setupPaginationListeners();
+
+          document.querySelector('.form-control.form-control-sm').addEventListener('change', function() {
+            const pageSize = this.value;  // 获取选择的每页显示数量
+            fetchPageData(1, pageSize);  // 请求第一页的数据，使用新的每页数量
+        });
+      
+          function fetchPageData(page, pageSize, keyword) {
+              const url = `/api/perfumes/page/${page}/limit/${pageSize}` + (keyword ? `?keyword=${encodeURIComponent(keyword)}` : '');
+              fetch(url, {
+                  method: 'GET',
+                  headers: {
+                      'Authorization': localStorage.getItem('token'),
+                      'Content-Type': 'application/json'
+                  }
+              })
+              .then(response => {
+                  if (!response.ok) {
+                      throw new Error('Failed to fetch data: ' + response.status);
+                  }
+                  return response.json();
+              })
+              .then(data => {
+                  updateTable(data.data);
+                  updatePagination(data.currentPage, data.totalPages);
+                  attachEventListeners();  // Re-attach event listeners each time the table updates
+              })
+              .catch(error => {
+                  console.error('Error fetching data:', error);
+              });
+          }
+      
+          function updateTable(perfumes) {
+              const tableBody = document.querySelector('table tbody');
+              tableBody.innerHTML = '';
+              perfumes.forEach(perfume => {
+                  const tr = document.createElement('tr');
+                  tr.innerHTML = `
+                      <th scope="row">
+                          <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                          </label>
+                      </th>
+                      <td>${perfume.id}</td>
+                      <td>${perfume.Brand}</td>
+                      <td>${perfume.Perfume}</td>
+                      <td>${perfume.Notes}</td>
+                      <td>${perfume.Top}</td>
+                      <td>${perfume.Middle}</td>
+                      <td>${perfume.Back}</td>
+                      <td>${perfume.Attribute}</td>
+                      <td>${perfume.Perfumer}</td>
+                      <td>${perfume.Label}</td>
+                      <td>${perfume.Score}</td>
+                      <td>${perfume.Smell}</td>
+                      <td>${perfume.Personality}</td>
+                      <td>${perfume.Scene}</td>
+                      <td>
+                          <button class="btn btn-sm btn-primary edit-btn" data-perfume-id="${perfume.id}">编辑</button>
+                          <button class="btn btn-sm btn-danger delete-btn" data-perfume-id="${perfume.id}">删除</button>
+                      </td>
+                  `;
+                  tableBody.appendChild(tr);
+              });
+          }
+      
+          function updatePagination(currentPage, totalPages) {
+              const pagination = document.querySelector('.pagination');
+              pagination.innerHTML = '';
+      
+              // 添加前一页和后一页按钮
+              pagination.innerHTML += createPageItem(currentPage - 1, '‹', false, currentPage === 1);
+              for (let i = 1; i <= totalPages; i++) {
+                  pagination.innerHTML += createPageItem(i, i, i === currentPage);
+              }
+              pagination.innerHTML += createPageItem(currentPage + 1, '›', false, currentPage === totalPages);
+          }
+      
+          function createPageItem(page, text, isActive, isDisabled) {
+              return `
+                  <li class="page-item ${isActive ? 'active' : ''} ${isDisabled ? 'disabled' : ''}">
+                      <a class="page-link" href="#" data-page="${page}" onclick="fetchPageData(${page}, document.querySelector('.form-control.form-control-sm').value, searchInput.value); return false;">${text}</a>
+                  </li>`;
+          }
+          function setupPaginationListeners() {
+            const pagination = document.querySelector('.pagination');
+            pagination.addEventListener('click', function(event) {
+                const pageLink = event.target;
+                if (pageLink.tagName === 'A' && pageLink.classList.contains('page-link')) {
+                    event.preventDefault();
+                    const page = parseInt(pageLink.getAttribute('data-page'), 10);
+                    if (!isNaN(page)) {
+                        fetchPageData(page, document.querySelector('.form-control.form-control-sm').value);
+                    }
+                }
+            });
+        }
+      });
+
+
+      let currentEditingPerfumeId = null;
+  
+  function attachEventListeners() {
+      // 编辑按钮事件监听
+      document.querySelectorAll('.edit-btn').forEach(button => {
+          button.addEventListener('click', function() {
+              const perfumeId = this.getAttribute('data-perfume-id');
+              console.log('编辑按钮被点击，香水ID:', perfumeId);
+              fetchPerfumeAndFillForm(perfumeId);
+              currentEditingPerfumeId = perfumeId;
+              $('.subside__barmenu').addClass('active'); // 显示表单
+              console.log('表单应该已经显示');
+          });
+      });
+  
+      // 添加按钮事件监听
+      document.querySelector('.addbtn').addEventListener('click', function() {
+          currentEditingPerfumeId = null;
+          clearForm(); // 清空表单
+          $('.subside__barmenu').addClass('active'); // 显示表单
+          console.log('添加新香水表单显示');
+      });
+  
+      // 关闭按钮事件监听
+      document.getElementById('cancelBtn').addEventListener('click', function() {
+          $('.subside__barmenu').removeClass('active'); // 隐藏表单
+          clearForm(); // 清空表单
+          console.log('表单已取消并隐藏');
+      });
+  
+      // 提交按钮事件监听
+      document.getElementById('submitBtn').addEventListener('click', function() {
+          if (currentEditingPerfumeId) {
+              updatePerfume(currentEditingPerfumeId); // 更新香水
+          } else {
+              addPerfume(); // 添加新香水
+          }
+      });
+  
+      // 删除按钮事件监听
+      document.querySelectorAll('.delete-btn').forEach(button => {
+          button.addEventListener('click', function() {
+              const perfumeId = this.getAttribute('data-perfume-id');
+              deletePerfume(perfumeId);
+          });
+      });
+  }
+  
+  function fetchPerfumeAndFillForm(perfumeId) {
+      // 根据 perfumeId 获取香水信息并填充到表单
+      fetch(`/api/perfumes/${perfumeId}`, {
+          method: 'GET',
+          headers: {
+              'Authorization': localStorage.getItem('token') // 确保 API 请求包含授权
+          }
+      })
+      .then(response => response.json())
+      .then(perfume => {
+          // 填充表单字段
+          document.querySelector('#perfumeNameInput').value = perfume.Perfume;
+          document.querySelector('#brandInput').value = perfume.Brand;
+          document.querySelector('#notesInput').value = perfume.Notes;
+          document.querySelector('#topNoteInput').value = perfume.Top;
+          document.querySelector('#middleNoteInput').value = perfume.Middle;
+          document.querySelector('#baseNoteInput').value = perfume.Back;
+          document.querySelector('#attributeInput').value = perfume.Attribute;
+          document.querySelector('#perfumerInput').value = perfume.Perfumer;
+          document.querySelector('#labelInput').value = perfume.Label;
+          document.querySelector('#scoreInput').value = perfume.Score;
+          document.querySelector('#smellInput').value = perfume.Smell;
+          document.querySelector('#personalityInput').value = perfume.Personality;
+          document.querySelector('#sceneInput').value = perfume.Scene;
+          document.querySelector('#perfumeDescInput').value = perfume.PerfumeDesc;
+         document.querySelector('#brandDescInput').value = perfume.BrandDesc;
+      })
+      .catch(error => console.log('获取香水信息失败', error));
+  }
+  
+  function deletePerfume(perfumeId) {
+      // 发送删除香水的请求
+      fetch(`/api/perfumes/delete/${perfumeId}`, {
+          method: 'DELETE',
+          headers: {
+              'Authorization': localStorage.getItem('token')
+          }
+      })
+      .then(response => {
+          if (!response.ok) throw new Error('Deletion failed');
+          alert('香水删除成功');
+          location.reload(); // 重新加载页面或更新表格
+      })
+      .catch(error => {
+          console.error('Error deleting perfume:', error);
+          alert('删除失败：' + error.message);
+      });
+  }
+  
+  function updatePerfume(perfumeId) {
+      // 从表单获取更新的香水数据
+      const PerfumeData = {
+          Perfume: document.querySelector('#perfumeNameInput').value,
+          Brand: document.querySelector('#brandInput').value,
+          Notes: document.querySelector('#notesInput').value,
+          PerfumeDesc: document.querySelector('#perfumeDescInput').value,
+          Top: document.querySelector('#topNoteInput').value,
+          Middle: document.querySelector('#middleNoteInput').value,
+          Back: document.querySelector('#baseNoteInput').value,
+          Attribute: document.querySelector('#attributeInput').value,
+          Perfumer: document.querySelector('#perfumerInput').value,
+          Label: document.querySelector('#labelInput').value,
+          Score: document.querySelector('#scoreInput').value,
+          Smell: document.querySelector('#smellInput').value,
+          Personality: document.querySelector('#personalityInput').value,
+          Scene: document.querySelector('#sceneInput').value,
+          BrandDesc: document.querySelector('#brandDescInput').value
+      };
+  
+      // 发送更新请求
+      fetch(`/api/perfumes/update/${perfumeId}`, {
+          method: 'PUT',
+          headers: {
+              'Authorization': localStorage.getItem('token'),
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(PerfumeData)
+      })
+      .then(response => {
+          if (!response.ok) throw new Error('Failed to update');
+          alert('香水更新成功');
+          location.reload(); // 重新加载页面或更新表格
+      })
+      .catch(error => {
+          console.error('Error updating perfume:', error);
+          alert('更新失败：' + error.message);
+      });
+  }
+  
+  function clearForm() {
+      // 清空所有输入框
+      document.querySelectorAll('#perfumeForm input').forEach(input => {
+          input.value = '';
+      });
+  }
+  
+  function addPerfume() {
+      // 获取新香水的数据
+      const PerfumeData = {
+          Perfume: document.querySelector('#perfumeNameInput').value,
+          Brand: document.querySelector('#brandInput').value,
+          Notes: document.querySelector('#notesInput').value,
+          PerfumeDesc: document.querySelector('#perfumeDescInput').value,
+          Top: document.querySelector('#topNoteInput').value,
+          Middle: document.querySelector('#middleNoteInput').value,
+          Back: document.querySelector('#baseNoteInput').value,
+          Attribute: document.querySelector('#attributeInput').value,
+          Perfumer: document.querySelector('#perfumerInput').value,
+          Label: document.querySelector('#labelInput').value,
+          Score: document.querySelector('#scoreInput').value,
+          Smell: document.querySelector('#smellInput').value,
+          Personality: document.querySelector('#personalityInput').value,
+          Scene: document.querySelector('#sceneInput').value,
+          BrandDesc: document.querySelector('#brandDescInput').value
+
+      
+      };
+  
+      // 发送添加新香水的请求
+      fetch('/api/perfumes/add', {
+          method: 'POST',
+          headers: {
+              'Authorization': localStorage.getItem('token'),
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(PerfumeData)
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('网络请求失败或服务器错误');
+          }
+          return response.json(); // 处理JSON响应
+      })
+      .then(data => {
+          alert(data.message); // 显示从服务器返回的消息
+          if (data.message === '创建成功') {    
+              location.reload(); 
+          }
+      })
+      .catch(error => {
+        console.error('添加香水失败:', error);
+        alert('添加香水失败: ' + error.message);
+    });
+  }
+
+      </script>
     <!-- If you prefer jQuery these are the required scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
@@ -533,14 +663,7 @@
     <script src="/js/vendor.js"></script>
     <script src="/js/adminx.js"></script>
     <script src="/js/main.js"></script>
-    <script>
-    $(".remove__click").on("click", function (e) {
-		$(".subside__barmenu").toggleClass("active");
-	});
-    </script>
-
-    <!-- If you prefer vanilla JS these are the only required scripts -->
-    <!-- script src="../dist/js/vendor.js"></script>
-    <script src="../dist/js/adminx.vanilla.js"></script-->
+    
+  
   </body>
 </html> 
