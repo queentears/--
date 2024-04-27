@@ -80,7 +80,7 @@ router.post('/login', async (req, res) => {
         }
 
         // 生成JWT token
-        const token = jwt.sign({ id: user.id }, jwtSecret, { expiresIn: '1h' });
+        const token = jwt.sign({ id: user.id }, jwtSecret, { expiresIn: '24h' });
         const tokenWithBearer = `Bearer ${token}`;
         res.json({ token: tokenWithBearer });
     } catch (error) {
@@ -92,7 +92,7 @@ router.post('/login', async (req, res) => {
 router.post('/add', passport.authenticate('jwt', { session: false }), async (req, res) => {
     const { UserName, Password, Email, Gender, Desc } = req.body;
     try {
-        // 检查用户名或邮箱是否已存在
+        // Check if username or email already exists
         const userExists = await User.findOne({
             where: {
                 [Op.or]: [
@@ -102,12 +102,12 @@ router.post('/add', passport.authenticate('jwt', { session: false }), async (req
             }
         });
         if (userExists) {
-            return res.status(409).send('用户名或邮箱已被使用');
+            return res.status(409).json({ message: '用户名或邮箱已被使用' });
         }
-        // 加密密码
+        // Encrypt password
         const hashedPassword = await bcrypt.hash(Password, saltRounds);
 
-        // 创建新用户
+        // Create new user
         const newUser = await User.create({
             UserName,
             Password: hashedPassword,
@@ -115,9 +115,9 @@ router.post('/add', passport.authenticate('jwt', { session: false }), async (req
             Gender,
             Desc
         });
-        res.status(201).send('用户创建成功');
+        res.status(201).json({ message: '用户创建成功' });
     } catch (error) {
-        res.status(500).send(error.message);
+        res.status(500).json({ message: error.message });
     }
 });
 

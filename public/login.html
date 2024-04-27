@@ -18,28 +18,29 @@
 
         <div class="card mb-0">
           <div class="card-body">
-            <form>
-              <div class="form-group">
-                <label for="exampleDropdownText" class="form-label">账号 </label>
-                <input type="text" class="form-control" placeholder="Number">
-              </div>
-              <div class="form-group">
-                <label for="exampleDropdownFormPassword1" class="form-label">密码</label>
-                <input type="password" class="form-control" placeholder="Password">
-              </div>
-              <div class="form-group">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                  <label class="custom-control-label" for="customCheck1">记住我</label>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-sm btn-block btn-primary">登录</button>
-            </form>
+              <form id="loginForm">
+                  <div class="form-group">
+                      <label for="loginInput" class="form-label">账号</label>
+                      <input type="text" class="form-control" id="loginInput" placeholder="Username or Email">
+                  </div>
+                  <div class="form-group">
+                      <label for="passwordInput" class="form-label">密码</label>
+                      <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                      <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck1">
+                          <label class="custom-control-label" for="customCheck1">记住我</label>
+                      </div>
+                  </div>
+                  <button type="button" onclick="handleLogin()" class="btn btn-sm btn-block btn-primary">登录</button>
+              </form>
           </div>
           <div class="card-footer text-center">
-            <a href="#"><small>Forgot your password?</small></a>
+              <a href="#"><small>Forgot your password?</small></a>
           </div>
-        </div>
+      </div>
+      
       </div>
     </div>
 
@@ -49,7 +50,7 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <script src="/js/vendor.js"></script>
     <script src="/js/adminx.js"></script>
-
+    <script src="/js/main.js"></script>
     <!-- If you prefer vanilla JS these are the only required scripts -->
     <!-- script src="../dist/js/vendor.js"></script>
     <script src="../dist/js/adminx.vanilla.js"></script-->
