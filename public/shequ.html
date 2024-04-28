@@ -199,10 +199,10 @@
                         <div class="col-sm-12 col-ma-6"  style="flex:0 0 50% ;text-align:right;">
                           <div class="dataTables_filter">
                             <label>
-                              <input type="search" class="form-control form-control-sm" style="width: auto;display: inline-block;">
-                              <button class="btn btn-sm btn-primary">搜索</button>
-                              <button class="btn btn-sm btn-primary remove__click">添加</button>
-                            </label>
+                              <input type="search" id="search-input" class="form-control form-control-sm" style="width: auto; display: inline-block;">
+                              <button id="search-button" class="btn btn-sm btn-primary">搜索</button>
+                              <button class="btn btn-sm btn-primary remove__click addbtn">添加</button>
+                          </label>      
                           </div>
                         </div>
                       </div>
@@ -223,124 +223,18 @@
                               <span class="custom-control-indicator"></span>
                             </label>
                           </th>
+                          <th scope="col">留言id</th>
                           <th scope="col">用户名</th>
                           <th scope="col">内容</th>
-                          <th scope="col">发表时间</th>
-                          <th scope="col">留言id</th>
+                          <th scope="col">发表时间</th>               
                           <th scope="col" style="text-align: center;">管理</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <th scope="row">
-                            <label class="custom-control custom-checkbox m-0 p-0">
-                              <input type="checkbox" class="custom-control-input table-select-row">
-                              <span class="custom-control-indicator"></span>
-                            </label>
-                          </th>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>
-                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
-                            <button class="btn btn-sm btn-danger">删除</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <label class="custom-control custom-checkbox m-0 p-0">
-                              <input type="checkbox" class="custom-control-input table-select-row">
-                              <span class="custom-control-indicator"></span>
-                            </label>
-                          </th>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>
-                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
-                            <button class="btn btn-sm btn-danger">删除</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <label class="custom-control custom-checkbox m-0 p-0">
-                              <input type="checkbox" class="custom-control-input table-select-row">
-                              <span class="custom-control-indicator"></span>
-                            </label>
-                          </th>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>
-                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
-                            <button class="btn btn-sm btn-danger">删除</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <label class="custom-control custom-checkbox m-0 p-0">
-                              <input type="checkbox" class="custom-control-input table-select-row">
-                              <span class="custom-control-indicator"></span>
-                            </label>
-                          </th>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>
-                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
-                            <button class="btn btn-sm btn-danger">删除</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <label class="custom-control custom-checkbox m-0 p-0">
-                              <input type="checkbox" class="custom-control-input table-select-row">
-                              <span class="custom-control-indicator"></span>
-                            </label>
-                          </th>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>
-                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
-                            <button class="btn btn-sm btn-danger">删除</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <label class="custom-control custom-checkbox m-0 p-0">
-                              <input type="checkbox" class="custom-control-input table-select-row">
-                              <span class="custom-control-indicator"></span>
-                            </label>
-                          </th>
-                          <td>q</td>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>q</td>
-                          <td>
-                            <button class="btn btn-sm btn-primary remove__click">编辑</button>
-                            <button class="btn btn-sm btn-danger">删除</button>
-                          </td>
-                        </tr>
                       </tbody>
                     </table>
                     <div class="card-footer d-flex justify-content-end">
-                      <ul class="pagination pagination-clean pagination-sm mb-0">
-                        <li class="page-item disabled">
-                          <a class="page-link" href="#" tabindex="-1"></a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#"></a>
-                        </li>
-                      </ul>
+                      <ul class="pagination pagination-clean pagination-sm mb-0"></ul>
                     </div>
                   </div>
                    <!-- // Table seamless striped  -->
@@ -354,42 +248,265 @@
       <!-- // Main Content -->
     </div>
     <div class="subside__barmenu" style="top: 220px;">
-      <h3 style="text-align: center;margin-bottom:0;">添加/修改社区信息</h3>
+      <h3 style="text-align: center; margin-bottom:0;">添加/修改社区信息</h3>
       <div class="card-body collapse show" id="card1">
-        <form>
-          <div class="form-group1 form-group3">
-            <label class="form-label" for="exampleInputText">用户名</label>
-            <input type="text" class="form-control" placeholder="Enter name">
-          </div>
-          <div class="form-group1  form-group3">
-            <label class="form-label" for="exampleInputText">内容</label>
-            <input type="text" class="form-control  form-group4" placeholder="Enter text">
-          </div>
-          <div class="form-group1  form-group3">
-            <label class="form-label" for="exampleInputText">发表时间</label>
-            <input type="text" class="form-control" placeholder="Enter text">
-          </div>
-          <div class="form-group1 form-group3">
-            <label class="form-label" for="exampleInputPassword1">留言ID</label>
-            <input type="number" class="form-control" id="exampleInputNumber" placeholder="Enter number">
-          </div>
-        </form>
-          <button type="submit" class="btn-s btn-primary">提交</button>
+          <form id="communityForm">
+              <div class="form-group1 form-group3">
+                  <label class="form-label" for="nameInput">用户名</label>
+                  <input type="text" class="form-control" id="nameInput" placeholder="Enter name">
+              </div>
+              <div class="form-group1 form-group3">
+                  <label class="form-label" for="contentInput">内容</label>
+                  <input type="text" class="form-control form-group4" id="contentInput" placeholder="Enter text">
+              </div>
+              <div class="form-group1 form-group3">
+                <label class="form-label" for="timeInput">发表时间</label>
+                <input type="time" class="form-control" id="timeInput" placeholder="Enter time">
+            </div>
+              <div class="form-group">
+                <button type="button" class="btn-s btn-primary" id="submitBtn" style="float: left; width: 30%; margin-left: 50px;top:10px;">提交</button>
+                <button type="button" class="btn-s btn-secondary" id="cancelBtn" style="float: left; width: 30%; margin-left: 50px;top:10px;">取消</button>
+            </div>
+          </form>
       </div>
-    <a class="close remove__click" >
-      <img src="/img/close.webp" style="height: 30px;">
-    </a>
-    </div>
+  </div>
+  
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script>
-      $(".remove__click").on("click", function (e) {
-      $(".subside__barmenu").toggleClass("active");
-    });
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <script src="/js/vendor.js"></script>
     <script src="/js/adminx.js"></script>
     <script src="/js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        console.error('No token found, please login first.');
+        return; // 如果没有 token，重定向到登录页面
+    }
+
+    const searchInput = document.querySelector('#search-input');
+    const searchButton = document.querySelector('#search-button');
+
+    // 触发搜索操作
+    searchButton.addEventListener('click', function() {
+        fetchPageData(1, document.querySelector('.form-control.form-control-sm').value, searchInput.value);
+    });
+
+    // 初始化加载数据
+    fetchPageData(1, 10, '');
+    setupPaginationListeners();
+
+
+    document.querySelector('.form-control.form-control-sm').addEventListener('change', function() {
+            const pageSize = this.value;  // 获取选择的每页显示数量
+            fetchPageData(1, pageSize);  // 请求第一页的数据，使用新的每页数量
+        });
+
+    function fetchPageData(page, pageSize, keyword) {
+        const url = `/api/shequ/page/${page}/limit/${pageSize}` + (keyword ? `?keyword=${encodeURIComponent(keyword)}` : '');
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Authorization': localStorage.getItem('token'),
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            updateTable(data.data);
+            updatePagination(data.currentPage, data.totalPages);
+            attachEventListeners();
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    }
+
+    function updateTable(communities) {
+        const tableBody = document.querySelector('table tbody');
+        tableBody.innerHTML = '';
+        communities.forEach(community => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <th scope="row">
+                    <label class="custom-control custom-checkbox m-0 p-0">
+                        <input type="checkbox" class="custom-control-input table-select-row">
+                        <span class="custom-control-indicator"></span>
+                    </label>
+                </th>
+                <td>${community.id}</td>
+                <td>${community.Name}</td>
+                <td>${community.Content}</td>
+                <td>${community.Time}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary edit-btn" data-community-id="${community.id}">编辑</button>
+                    <button class="btn btn-sm btn-danger delete-btn" data-community-id="${community.id}">删除</button>
+                </td>
+            `;
+            tableBody.appendChild(tr);
+        });
+    }
+
+    function updatePagination(currentPage, totalPages) {
+        const pagination = document.querySelector('.pagination');
+        pagination.innerHTML = '';
+        for (let i = 1; i <= totalPages; i++) {
+            const pageItem = document.createElement('li');
+            pageItem.className = 'page-item' + (i === currentPage ? ' active' : '');
+            pageItem.innerHTML = `<a class="page-link" href="#" data-page="${i}">${i}</a>`;
+            pagination.appendChild(pageItem);
+            pageItem.addEventListener('click', (e) => {
+                e.preventDefault();
+                fetchPageData(i, document.querySelector('.form-control.form-control-sm').value, searchInput.value);
+            });
+        }
+    }
+    function createPageItem(page, text, isActive, isDisabled) {
+            return `
+                <li class="page-item ${isActive ? 'active' : ''} ${isDisabled ? 'disabled' : ''}">
+                    <a class="page-link" href="#" data-page="${page}" onclick="fetchPageData(${page}, document.querySelector('.form-control.form-control-sm').value); return false;">${text}</a>
+                </li>`;
+        }
+        function setupPaginationListeners() {
+            const pagination = document.querySelector('.pagination');
+            pagination.addEventListener('click', function(event) {
+                const pageLink = event.target;
+                if (pageLink.tagName === 'A' && pageLink.classList.contains('page-link')) {
+                    event.preventDefault();
+                    const page = parseInt(pageLink.getAttribute('data-page'), 10);
+                    if (!isNaN(page)) {
+                        fetchPageData(page, document.querySelector('.form-control.form-control-sm').value);
+                    }
+                }
+            });
+        }
+   });
+
+    </script>
+<script>
+  
+      let currentEditingCommunityId = null;
+  
+      function attachEventListeners() {
+          document.querySelectorAll('.edit-btn').forEach(button => {
+              button.addEventListener('click', function() {
+                  const communityId = this.getAttribute('data-community-id');
+                  fetchCommunityAndFillForm(communityId);
+                  currentEditingCommunityId = communityId;
+                  $('.subside__barmenu').addClass('active');  
+              });
+          });
+  
+          document.querySelector('.addbtn').addEventListener('click', function() {
+              currentEditingCommunityId = null;
+              clearForm(); // 清空表单
+              $('.subside__barmenu').addClass('active'); 
+          });
+  
+          document.getElementById('cancelBtn').addEventListener('click', function() {
+            $('.subside__barmenu').removeClass('active'); // 隐藏表单
+              clearForm(); // 清空表单
+          });
+  
+          document.getElementById('submitBtn').addEventListener('click', function() {
+              if (currentEditingCommunityId) {
+                  updateCommunity(currentEditingCommunityId); // 更新社区信息
+              } else {
+                  addCommunity(); // 添加新社区
+              }
+          });
+  
+          document.querySelectorAll('.delete-btn').forEach(button => {
+              button.addEventListener('click', function() {
+                  const communityId = this.getAttribute('data-community-id');
+                  deleteCommunity(communityId);
+              });
+          });
+      }
+  
+      function fetchCommunityAndFillForm(communityId) {
+          fetch(`/api/shequ/${communityId}`, {
+              method: 'GET',
+              headers: {
+                  'Authorization': localStorage.getItem('token'),
+                  'Content-Type': 'application/json'
+              }
+          })
+          .then(response => response.json())
+          .then(community => {
+              document.getElementById('nameInput').value = community.Name;
+              document.getElementById('contentInput').value = community.Content;
+              document.getElementById('timeInput').value = community.Time;
+          })
+          .catch(error => console.error('Error fetching community:', error));
+      }
+  
+      function deleteCommunity(communityId) {
+          fetch(`/api/shequ/delete/${communityId}`, {
+              method: 'DELETE',
+              headers: {
+                  'Authorization': localStorage.getItem('token'),
+                  'Content-Type': 'application/json'
+              }
+          })
+          .then(response => {
+              if (!response.ok) throw new Error('Deletion failed');
+              alert('删除成功');
+              location.reload(); // Refresh the table
+          })
+          .catch(error => console.error('Error deleting community:', error));
+      }
+  
+      function updateCommunity(communityId) {
+          const name = document.getElementById('nameInput').value;
+          const content = document.getElementById('contentInput').value;
+          const time = document.getElementById('timeInput').value;
+  
+          fetch(`/api/shequ/update/${communityId}`, {
+              method: 'PUT',
+              headers: {
+                  'Authorization': localStorage.getItem('token'),
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ id: communityId, Name: name, Content: content, Time: time })
+          })
+          .then(response => response.json())
+          .then(data => {
+              alert(data.message);
+              location.reload(); // Refresh the table
+          })
+          .catch(error => console.error('Error updating community:', error));
+      }
+  
+      function addCommunity() {
+          const name = document.getElementById('nameInput').value;
+          const content = document.getElementById('contentInput').value;
+          const time = document.getElementById('timeInput').value;
+          fetch('/api/shequ/add', {
+              method: 'POST',
+              headers: {
+                  'Authorization': localStorage.getItem('token'),
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ Name: name, Content: content, Time: time })
+          })
+          .then(response => response.json())
+          .then(data => {
+              alert(data.message);
+              if (data.message === '创建成功') {
+                $('.subside__barmenu').removeClass('active'); // 隐藏表单
+              }
+          })
+          .catch(error => console.error('Error adding community:', error));
+      }
+  
+      function clearForm() {
+          document.getElementById('nameInput').value = '';
+          document.getElementById('contentInput').value = '';
+          document.getElementById('timeInput').value = '';
+      }
+  </script>
+  
+    
+
   </body>
 </html> 
