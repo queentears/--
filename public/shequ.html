@@ -247,9 +247,15 @@
       </div>
       <!-- // Main Content -->
     </div>
+<<<<<<< HEAD
     <div class="subside__barmenu" style="top: 220px;height: 300px;">
       <h3 style="text-align: center; margin-bottom:0;">添加/修改社区信息</h3>
       <div class="card-body collapse show" id="card1" style="margin-left: 40px;">
+=======
+    <div class="subside__barmenu" style="top: 220px;height: 220px;">
+      <h3 style="text-align: center; margin-bottom:0;">社区信息</h3>
+      <div class="card-body collapse show" id="card1">
+>>>>>>> a9a7c8669109234d45920162f43fc264cee39fad
           <form id="communityForm">
               <div class="form-group1 form-group3">
                   <label class="form-label" for="nameInput">用户名</label>
@@ -493,7 +499,8 @@
           .then(data => {
               alert(data.message);
               if (data.message === '创建成功') {
-                $('.subside__barmenu').removeClass('active'); // 隐藏表单
+                location.reload(); // Refresh the table
+            
               }
           })
           .catch(error => console.error('Error adding community:', error));
