@@ -1,8 +1,8 @@
 const db=require('../config/db');
 const Sequelize = require('sequelize');
 const { DataTypes } = require('sequelize');
-
-const favModel = db.define('favorites', {
+const PerfumeModel = require('./perfumeMod');
+const FavoriteModel = db.define('favorites', {
    
     id:{
         type: DataTypes.INTEGER,
@@ -18,14 +18,20 @@ const favModel = db.define('favorites', {
         type: DataTypes.INTEGER,
         allowNull: false,
         field:'PerfumeID',
-  }
+  },
+  AddTime:{
+        type: DataTypes.DATE,
+        allowNull: false,
+        field:'AddTime',
+    }
 }, {
    
     freezeTableName: true,
-    tableName: 'favorites', // 确保这个名称与你的数据库表名一致
-    timestamps: false, // 假设你的表不包含Sequelize默认的createdAt和updatedAt字段
+    tableName: 'favorites', 
+    timestamps: false, 
     
 });
 
-module.exports = favModel;
+
+module.exports = FavoriteModel;
 

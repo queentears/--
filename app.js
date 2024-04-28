@@ -8,6 +8,7 @@ var passport = require('passport');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/api/users');
 var PerfumeRouter = require('./routes/api/perfumes');
+var collectRouter = require('./routes/api/collections');
 
 const app = express();
 
@@ -27,6 +28,7 @@ require('./config/passport')(passport);
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/perfumes', PerfumeRouter);
+app.use('/api/collections', collectRouter);
 
 
 

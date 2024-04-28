@@ -2,7 +2,7 @@ const db=require('../config/db');
 const Sequelize = require('sequelize');
 const { DataTypes } = require('sequelize');
 
-const perModel = db.define('香水总数据', {
+const PerfumeModel = db.define('香水总数据', {
    
     id:{
         type: DataTypes.INTEGER,
@@ -96,7 +96,7 @@ const perModel = db.define('香水总数据', {
     
 });
 
-module.exports = perModel;
+module.exports = PerfumeModel;
 
 //模型定义完成后，你可以使用模型来查询数据库。例如：
 // const student = require('./student');
