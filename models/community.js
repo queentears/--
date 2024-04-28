@@ -21,7 +21,7 @@ const Community = db.define('社区', {
         field:'content',
     },
     Time:{
-        type:DataTypes.DATE,
+        type:DataTypes.TIME,
         allowNull:false,
         field:'time',
     }},

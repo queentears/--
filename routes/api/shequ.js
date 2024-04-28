@@ -71,13 +71,13 @@ router.put('/update/:id', passport.authenticate('jwt', { session: false }), asyn
     const { Name, Content, Time } = req.body;
 
     if (!Name || !Content) {
-        return res.status(400).send('必须提供社区名和内容');
+        return res.status(400).send({message:'必须提供社区名和内容'});
     }
 
     try {
         const community = await CommunityModel.findByPk(id);
         if (!community) {
-            return res.status(404).send('社区信息未找到');
+            return res.status(404).send({message:'社区内容未找到'});
         }
 
         community.Name = Name;
@@ -85,8 +85,9 @@ router.put('/update/:id', passport.authenticate('jwt', { session: false }), asyn
         community.Time = Time;
 
         await community.save();
-        res.status(200).send('社区信息更新成功');
+        res.status(200).send({message:'社区信息更新成功'});
     } catch (error) {
+        console.log(error);
         res.status(500).send(error.message);
     }
 });
@@ -97,7 +98,7 @@ router.get("/:id", passport.authenticate('jwt', { session: false }), async (req,
     try {
         const community = await CommunityModel.findByPk(id);
         if (!community) {
-            return res.status(404).send('社区信息未找到');
+            return res.status(404).send({message:'社区信息未找到'});
         }
         res.json(community);
     } catch (error) {
