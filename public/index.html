@@ -215,9 +215,7 @@
                         评论数
                       </h5>
 
-                      <div class="card-title-sub">
-                        456
-                      </div>
+                      <div class="card-title-sub" id="community-count">Loading...</div>
                     </div>
 
                     <div class="progress mt-auto">
@@ -235,9 +233,7 @@
                     </div>
                     <div class="card-body">
                       <div class="card-info-title">香水总数</div>
-                      <h3 class="card-title mb-0">
-                        10000
-                      </h3>
+                      <h3 class="card-title mb-0" id="perfume-count">Loading...</h3>
                     </div>
                   </div>
                 </div>
@@ -251,9 +247,7 @@
                     </div>
                     <div class="card-body">
                       <div class="card-info-title">总人数</div>
-                      <h3 class="card-title mb-0">
-                        1,258
-                      </h3>
+                      <h3 class="card-title mb-0" id="user-count">Loading...</h3>
                     </div>
                   </div>
                 </div>
@@ -354,25 +348,41 @@
     chart.draw(data, options);
   }
 </script> 
-<script type="text/javascript">
+<script>
   google.charts.load('current', {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
-
-  function drawChart() {
-    var data = google.visualization.arrayToDataTable([
+  google.charts.setOnLoadCallback(fetchStats);
+  
+  function fetchStats() {
+    fetch('/stats')
+      .then(response => response.json())
+      .then(data => {
+        updateStats(data);
+        drawChart(data);
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  }
+  
+  function updateStats(data) {
+    document.getElementById('community-count').textContent = data.totalCommunities.toLocaleString();
+    document.getElementById('perfume-count').textContent = data.totalPerfumes.toLocaleString();
+    document.getElementById('user-count').textContent = data.totalUsers.toLocaleString();
+  }
+  
+  function drawChart(data) {
+    var genderData = google.visualization.arrayToDataTable([
       ['性别', '人数'],
-      ['男',2],
-      ['女',11,]
+      ['男', data.maleUsers],
+      ['女', data.femaleUsers]
     ]);
-
+  
     var options = {
       title: '用户占比'
     };
-
+  
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-    chart.draw(data, options);
+    chart.draw(genderData, options);
   }
-</script>
+  </script>
     <!-- If you prefer jQuery these are the required scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>

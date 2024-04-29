@@ -38,11 +38,9 @@ const userModel = db.define('user', {
     },
 }, {
    
-   // modelName: 'Student',
-    // 如果你不想使用Sequelize自动生成的复数形式表名（students），可以显式指定表名
-    freezeTableName: true,
-    tableName: 'user', // 确保这个名称与你的数据库表名一致
-    timestamps: false, // 假设你的表不包含Sequelize默认的createdAt和updatedAt字段
+     freezeTableName: true,
+    tableName: 'user', 
+    timestamps: false, 
     
 });
 
