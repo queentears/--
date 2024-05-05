@@ -927,14 +927,14 @@ function updatePerfumeCards(perfumes) {
     perfumes.forEach(perfume => {
         let commentContent = perfume.Comment ? `<a class="card1-link">评价：${perfume.Comment}</a>` : '';
         const perfumeHTML = `
-            <div class="col-lg-4 col-md-12">
+            <div class="col-lg-4 col-md-12" style="height:700px;">
                 <div class="card1">
                     <div class="card1-body">
                         <h4 class="card1-title">${perfume.Perfume}</h4>
                         <h6 class="card1-subtitle text-muted">${perfume.Brand}</h6>
                     </div>    
                            
-                    <img src="/img/perfume/${perfume.id}.png" alt="${perfume.Perfume}">
+                    <img src="/img/perfume/${perfume.id}.png" alt="${perfume.Perfume}" style="height:400px">
                     <div class="card1-body">
                         <p class="card1-text">标签: ${perfume.Label}</p>
                         ${commentContent}  
@@ -986,7 +986,7 @@ function updateTopUsers(users) {
                             </div>
                             <h3 class="h5 mb-0">${user.UserName}</h3>
                             <p class="text-sm fw-light">${user.Email}</p>
-                            <div class="d2-inline-block py-1 px-4 rounded-pill bg-dash-dark-3 fw-light text-sm mb-4">${user.Desc || ''}</div>
+                            <div class="text-sm">简介：${user.Desc || ''}</div>
                         </div>
                     </div>
                 </div>
