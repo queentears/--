@@ -81,8 +81,13 @@ const PerfumeModel = db.define('香水总数据', {
         allowNull:true,
         field:'气味',
     },
-    Label:{
+    Comment:{
         type:DataTypes.STRING,
+        allowNull:true,
+        field:'一句话香评',
+    },
+    Label:{
+        type:DataTypes.TEXT,
         allowNull:true,
         field:'标签',
     },

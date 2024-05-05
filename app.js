@@ -10,6 +10,7 @@ var usersRouter = require('./routes/api/users');
 var PerfumeRouter = require('./routes/api/perfumes');
 var collectRouter = require('./routes/api/collections');
 var shequRouter = require('./routes/api/shequ');
+var recommandRouter = require('./routes/api/recommend');
 
 const app = express();
 
@@ -31,7 +32,7 @@ app.use('/api/users', usersRouter);
 app.use('/api/perfumes', PerfumeRouter);
 app.use('/api/collections', collectRouter);
 app.use('/api/shequ', shequRouter);
-
+app.use('/api/recommend', recommandRouter);
 
 
 
